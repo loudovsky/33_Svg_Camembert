@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.min.css">
+    <title>Exercice ...</title>
+</head>
+<body>
+    <svg viewBox="-1 -1 2 2">
+        <!-- 
+        *-*-Principe de base -*-*
+        ++path : le chemin qui permet de tracer une part du 
+        camembert, 
+        ++stroke donne la couleur du tracé, ++stroke-width est la largeur en mesure relative, 
+        ++ d = point de départ où on place notre "stylo" 
+        ++ M comme move puis 0 0
+        ++ L = ligne qu'on trace vers la droite 
+        ++ A = va dessiner un arc de cercle (cf MDN arc svg path) A rx ry x-axis-rotation etc...
+        ++ sweep-flag = définit sens de l'arc (0 ou 1)
+        ++ large-arc-flag = définit cmt il doit tracer l'arc : chemin le plus court ou chemin le plus long-
+        ++ L(dernier) = signifie qu'on finit avec une ligne qui revient vers  le centre
+        ++ lors du traçage des arcs on va surtout jouer sur les points d'arrivée en x et en y-->
+        <path fill="#000" stroke-width="0.1" d="M 0 0 L 1 0 A 1 1 0 0 1 0 1 L 0 0"></path>        
+    </svg>
+    <pie-chart data="40;30;30;20;10;10"></pie-chart>
+    <pie-chart data="10;90"></pie-chart>
+    
+    <script src="scripts/app.js" defer></script>
+</body>
+</html>
